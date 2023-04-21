@@ -1,0 +1,394 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif;
+}
+
+
+
+.limitador{
+    padding: 20px;
+}
+
+/* MENU */
+a.a_nav {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+  }
+  
+  a:hover {
+    border-radius: 20px;
+    background: rgba(228, 197, 197, 0.384);
+  }
+  
+  #logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  #header {
+
+    box-sizing: border-box;
+    height: 70px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+  }
+  
+  #menu {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+  }
+  
+  #menu a {
+    display: block;
+    padding: 0.5rem;
+  }
+  
+  #btn-mobile {
+    display: none;
+  }
+  
+  @media (max-width: 600px) {
+    #menu {
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 70px;
+      right: 0px;
+      background: black;
+      transition: 0.6s;
+      z-index: 1000;
+      height: 0px;
+      visibility: hidden;
+      overflow-y: hidden;
+    }
+    #nav.active #menu {
+      height: calc(100vh - 70px);
+      visibility: visible;
+      overflow-y: auto;
+    }
+    #menu a {
+      padding: 1rem 0;
+      margin: 0 1rem;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    }
+    #btn-mobile {
+      position: absolute;
+      left: 0;
+      top: 20px;
+      display: flex;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      gap: 0.5rem;
+    }
+    #hamburger {
+      border-top: 2px solid;
+      width: 20px;
+      color: white;
+      
+    }
+    #hamburger::after,
+    #hamburger::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: white;
+      margin-top: 5px;
+      transition: 0.3s;
+      position: relative;
+    }
+    #nav.active #hamburger {
+        
+      border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+      transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+  }
+
+
+/* ---- */
+
+/* Index */
+
+.principal{
+    background-image: url('../img/wp.jpg');
+}
+
+.princ{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.princ h1{
+    color: white;
+    font-size: 50px;
+}
+
+.princ img{
+    width: 600px;
+    border-radius: 20px;
+}
+
+.carrossel{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.carousel-item img{
+    max-width: 600px;
+    border-radius: 10px;
+    
+}
+
+@media (max-width: 1000px) {
+    .princ{
+        text-align: center;
+       flex-direction: column;
+
+    }
+    .princ img{
+        width: 500px;
+        border-radius: 20px;
+    }
+}
+
+
+@media (max-width: 500px) {
+  
+    .princ img{
+        width: 300px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 310px) {
+    .principal{
+        height: 100vh;
+    }
+    .princ h1{
+        font-size: 20px;
+    }
+    .princ img{
+        width: 200px;
+        border-radius: 20px;
+    }
+}
+
+/* ---- */
+
+/* História */
+
+.historia{
+    background-image: url('../img/wp.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    text-align: center;
+    flex-direction: column;
+  
+}
+
+.historia_text{
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.historia h1{
+    font-size: 32px;
+}
+
+.historia h2{
+    font-size: 30px;
+    color: white;
+    margin-top: 30px;
+}
+
+.historia p{
+    font-size: 20px;
+}
+
+
+/* ---- */
+
+
+/* -Personagens */
+
+.personagens h1{
+    color: white;
+ text-align: center;
+}
+
+.personagens{
+    background-image: url('../img/wp.jpg');
+    text-align: center;
+}
+
+.personagem{
+    background-color: #fff;
+    border-radius: 15px;
+    max-width: 200px;
+    margin-top: 40px;
+    
+}
+
+.personagens_fileira{
+    
+    margin-top: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.personagem img{
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+    width: 200px;
+    height: 200px;
+}
+
+.personagem img:hover{
+    -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.personagens a{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Kanit';
+}
+
+@media (max-width: 820px) {
+    .personagens_fileira{
+        flex-direction: column;
+        
+        align-items: center;
+    }
+  }
+
+/* ---- */
+
+
+/* Criador */
+
+.criador{
+    background-image: url('../img/wp.jpg');
+}
+
+.criador_text{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.criador_text img{
+    width: 200px;
+    border-radius: 5px;
+    -webkit-transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+}
+
+.criador_text img:hover{
+    -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.criador_text h1,h2,h3,h4, p{
+    margin-top: 15px;
+}
+
+@media (max-width: 320px) {
+    .criador_text{
+        text-align: center;
+    }
+    .criador_text img{
+        width: 160px;
+        
+    }
+  }
+
+/* ---- */
+
+/* -Jogos */
+
+.jogos{
+    background-image: url('../img/wp.jpg');
+    text-align: center;
+}
+
+.jogos h1{
+    color: white;
+    font-size: 30px;
+}
+
+.fnaf{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    margin-top: 30px;
+    align-items: center;
+    max-width: 550px;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.fnaf img{
+    -webkit-transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+    border-radius: 15px;
+    margin-top: 20px;
+    width: 400px;
+}
+
+.fnaf img:hover{
+    -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+@media (max-width: 450px) {
+    .fnaf img{
+        
+        width: 250px;
+    }
+  }
+
+  @media (max-width: 300px) {
+    .fnaf img{
+        
+        width: 200px;
+    }
+  }
+  @media (max-width: 250px) {
+    .fnaf img{
+        
+        width: 160px;
+    }
+  }
+/* ---- */
