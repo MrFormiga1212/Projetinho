@@ -208,6 +208,7 @@ a.a_nav {
 }
 
 .historia_text{
+ 
     background-color: white;
     border-radius: 20px;
     padding: 20px;
@@ -227,6 +228,32 @@ a.a_nav {
     font-size: 20px;
 }
 
+@media (max-width: 880px) {
+  .historia_text{
+    margin: 0 auto;
+    width: 550px;
+}
+  .historia iframe{
+    width: 400px;
+  }
+}
+
+@media (max-width: 570px) {
+  .historia_text{
+    margin: 0 auto;
+    width: 400px;
+}
+}
+@media (max-width: 415px) {
+  .historia_text{
+    margin: 0 auto;
+    width: 220px;
+}
+.historia iframe{
+  width: 250px;
+  height: 250px;
+}
+}
 
 /* ---- */
 
